@@ -21,7 +21,7 @@ require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
   jaffle_shop:
-      schema: trial_1
+      schema: {{ (run_started_at.timestamp() * 1000) | int }}
       materialized: table
       staging:
         materialized: view
