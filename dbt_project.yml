@@ -21,7 +21,7 @@ require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
   jaffle_shop:
-      schema: "133434334"
+      schema: "trial_1_{{ var('epoch_timestamp') }}"
       materialized: table
       staging:
         materialized: view
